@@ -1,0 +1,18 @@
+print('How many columns do you want? ', end='')
+columns = int(input())
+print('How many rows do you want? ', end='')
+rows = int(input())
+print('x', end="  ")
+for h in range(1, (columns + 1)):
+    print(h, end="  ")
+print()
+num = 1
+mult = 1
+for i in range(rows):
+    print(num, end='  ')
+    for j in range(columns ):
+        print(num * mult, end='  ')
+        mult += 1
+    print()
+    num += 1
+    mult = 1
