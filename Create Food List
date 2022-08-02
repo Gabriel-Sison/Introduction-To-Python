@@ -1,0 +1,17 @@
+food = []
+done = False
+
+def food_database(item):
+    print("What do you need to buy?", end=' ')
+    food.append(item)
+
+print("What do you need to buy?", end=' ')
+while done is False:
+    item = input()
+    food_database(item)
+    if (item == 'done') or (item == ""):
+        food.pop()
+        done = True
+
+food.sort()
+print(food)
