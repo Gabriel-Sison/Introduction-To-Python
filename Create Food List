@@ -1,17 +1,32 @@
-food = []
-done = False
+list = [
+    ['apples', '1 grams', '2 fats', '3 protein', '4 carbs'],
+    ['bananas', '5 grams', '6 fats', '7 protein', '8 carbs'],
+    ['carrots', '9 grams', '10 fats', '11 protein', '12 carbs']
+]
 
-def food_database(item):
-    print("What do you need to buy?", end=' ')
-    food.append(item)
+def add_new_food(number_new_foods):
+    for i in range(number_new_foods):
+        print('Food name: ', end='')
+        food_name = input()
+        print('Grams: ', end='')
+        grams = input()
+        print('Fats: ', end='')
+        fats = input()
+        print('Proteins: ', end='')
+        proteins = input()
+        print('Carbs: ', end='')
+        carbs = input()
+        new_food = [food_name, grams + " grams", fats + ' fats', proteins + ' proteins', carbs + ' carbs']
+        list.append(new_food)
+        list.sort()
 
-print("What do you need to buy?", end=' ')
-while done is False:
-    item = input()
-    food_database(item)
-    if (item == 'done') or (item == ""):
-        food.pop()
-        done = True
+print("How many new foods? ", end='')
+number_new_foods = int(input())
+add_new_food(number_new_foods)
 
-food.sort()
-print(food)
+for i in range(len(list)):
+    ab = list[i]
+    for j in range(5):
+        bc = ab[j]
+        print(bc, end=' ')
+    print()
