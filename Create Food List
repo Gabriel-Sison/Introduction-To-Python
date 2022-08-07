@@ -14,20 +14,23 @@ def add_new_food(number_new_foods):
         fats = input()
         print('Carbs: ', end='')
         carbs = input()
-        sublist.append(food_name)
+        list.append(food_name)
         sublist.append(grams)
         sublist.append(proteins)
         sublist.append(fats)
         sublist.append(carbs)
         list.append(sublist)
-        list.sort()
 
 print("How many new foods? ", end='')
 number_new_foods = int(input())
 add_new_food(number_new_foods)
 
 print('\nFormatting:'
-      '\nFood name, Grams, Proteins, Fats, Carbs')
+      '\nFood name:\n'
+      'Grams, Proteins, Fats, Carbs')
 for i in range(len(list)):
     ab = list[i]
     print(ab)
+
+food = input('What are you looking for? ')
+print(list.index(food))
