@@ -1,25 +1,33 @@
 list = []
 
+# FORMATTED LIKE [Food name, grams, protein, fats, carbs]
 def add_new_food(number_new_foods):
     for i in range(number_new_foods):
+        sublist = []
         print('Food name: ', end='')
         food_name = input()
         print('Grams: ', end='')
         grams = input()
-        print('Fats: ', end='')
-        fats = input()
         print('Proteins: ', end='')
         proteins = input()
+        print('Fats: ', end='')
+        fats = input()
         print('Carbs: ', end='')
         carbs = input()
-        new_food = [f'{food_name}: {grams} grams, {fats} fats, {proteins} proteins, {carbs} carbs']
-        list.append(new_food)
+        sublist.append(food_name)
+        sublist.append(grams)
+        sublist.append(proteins)
+        sublist.append(fats)
+        sublist.append(carbs)
+        list.append(sublist)
         list.sort()
 
 print("How many new foods? ", end='')
 number_new_foods = int(input())
 add_new_food(number_new_foods)
 
+print('Formatting:'
+      '\nFood name, Grams, Proteins, Fats, Carbs')
 for i in range(len(list)):
     ab = list[i]
     print(ab)
