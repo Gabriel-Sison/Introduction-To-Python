@@ -26,7 +26,7 @@ print("How many new foods? ", end='')
 number_new_foods = int(input())
 add_new_food(number_new_foods)
 
-print('Formatting:'
+print('\nFormatting:'
       '\nFood name, Grams, Proteins, Fats, Carbs')
 for i in range(len(list)):
     ab = list[i]
