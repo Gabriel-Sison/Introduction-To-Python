@@ -1,0 +1,68 @@
+music = {
+    'Pink Floyd': {
+        'The Dark Side of the Moon': {
+            'songs': [ 'Speak to Me', 'Breathe', 'On the Run', 'Money'],
+            'year': 1973,
+            'platinum': True
+        },
+        'The Wall': {
+            'songs': [ 'Another Brick in the Wall', 'Mother', 'Hey you'],
+            'year': 1979,
+            'platinum': True
+        }
+    },
+    'Justin Bieber': {
+        'My World':{
+            'songs': ['One Time', 'Bigger', 'Love Me'],
+            'year': 2010,
+            'platinum': True
+        }
+    }
+}
+
+print("1 = Add artist, 2 = Add Album to artist, 3 = Show music, 4 = Exit")
+option = int(input("What do you want to do? "))
+
+albums_dict = {}
+songs_dict = {}
+
+while option != 4:
+    if option == 1:
+        name = input("What is the artists name? ")
+        album = input("What album are you adding? ")
+        songs = input("What songs are in this album? ")
+        year = input("What year was this made? ")
+        status= input("Was this platinum or not? (Y/N) ")
+
+        list_of_songs = songs.split(', ')
+
+        music[name] = albums_dict
+        songs_dict['songs'] = list_of_songs
+        songs_dict['year'] = int(year)
+        if status == 'Y':
+            songs_dict['Platinum'] = True
+        else:
+            songs_dict['Platinum'] = False
+        albums_dict[album] = songs_dict
+        option = int(input("What do you want to do next?"))
+    if option == 2:
+        name = input("What is the artists name? ")
+        album = input("What album are you adding? ")
+        songs = input("What songs are in this album? ")
+        year = input("What year was this made? ")
+        status = input("Was this platinum or not? (Y/N) ")
+
+        list_of_songs = songs.split(', ')
+
+        music[name] = albums_dict
+        songs_dict['songs'] = list_of_songs
+        songs_dict['year'] = int(year)
+        if status == 'Y':
+            songs_dict['Platinum'] = True
+        else:
+            songs_dict['Platinum'] = False
+        albums_dict[album] = songs_dict
+        option = int(input("What do you want to do next?"))
+    if option == 3:
+        print(music)
+        option = int(input("What do you want to do next?"))
