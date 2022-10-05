@@ -1,0 +1,18 @@
+print("What is your name? ", end='')
+name = "John David Smith Kim Choi Mahri Arceo Sison Gabriel"
+print("Your name is " + name)
+
+nameMod = ''
+for i in range(len(name)):
+    if name[i] == ' ':
+        nameMod = name[:i] + 'llll' + name[i:]
+        print(nameMod)
+
+lastMod = name[:-1] + 'llll'
+print(lastMod)
+
+for i in range(len(name)):
+    if name[i] == ' ':
+        nameMod = name[:i] + 'llll' + name[i:]
+        print(nameMod)
+        
