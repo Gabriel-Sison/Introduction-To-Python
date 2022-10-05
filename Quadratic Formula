@@ -1,0 +1,17 @@
+from math import sqrt;
+
+print("In the format of ax^2 + bx + c:")
+
+print("What is a? ", end = '')
+a = int(input())
+
+print("What is b? ", end = '')
+b = int(input())
+
+print("What is c? ", end = '')
+c = int(input())
+
+root1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a)
+root2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a)
+
+print("Your roots are:", root1, 'and', root2)
